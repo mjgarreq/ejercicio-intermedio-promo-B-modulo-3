@@ -5,9 +5,11 @@ function Country({countryData}) {
   return (
     <article>
       <p>{flag}</p>
-      <h3>{name.official}</h3>
+      <h3>{name.common}</h3>
       <p>{capital}</p>
-      <p>{continents}</p>
+      <ul>
+        {continents.map((item, index) => <li key={index}>{item}</li>)}
+      </ul>
     </article>
   )
 }
